@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../assets/logo.png';
+import logo from '@/assets/logo.png';
 import { Link } from 'react-router';
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { HiOutlineMenuAlt3, HiOutlineX } from "react-icons/hi";
