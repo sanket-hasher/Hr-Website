@@ -3,6 +3,9 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
 import Services from '../components/Services';
+import About from '../components/About';
+import WhyChooseUs from '../components/WhyChooseUs';
+import IndustriesWeServe from '../components/IndustriesWeServe';
 
 const Home = () => {
   const servicesRef = useRef(null);
@@ -16,10 +19,13 @@ const Home = () => {
 
   return (
   
-    <div className='bg-gradient-to-l from-black to-blue-900'>
+    <div>
     <Navbar scrollToServices={scrollToServices} />
-      <Hero />
+      <Hero/>
+      <About />
+      <WhyChooseUs/>
       <Services refProp={servicesRef} activeTab={activeTab} setActiveTab={setActiveTab} />
+       <IndustriesWeServe/>
       <Footer />
     </div>
   );

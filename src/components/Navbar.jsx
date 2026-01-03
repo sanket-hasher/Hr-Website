@@ -23,7 +23,7 @@ const Navbar = ({ scrollToServices, hideServices = false }) => {
   );
 
   return (
-    <nav className="bg-white rounded-full relative top-4 flex justify-between items-center py-3 px-6 md:px-20 w-[90%] md:w-3/4 m-auto shadow-md z-50">
+    <nav className="text-white w-full flex justify-between items-center py-3 px-6 md:px-20 m-auto z-50 top-0 fixed">
       <img className="h-14" src={logo} alt="logo" />
 
       {/* Hamburger icon */}

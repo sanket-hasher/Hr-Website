@@ -29,7 +29,7 @@ const Services = ({ refProp, activeTab, setActiveTab }) => {
   return (
     <div ref={refProp} className="min-h-screen bg-black text-white flex justify-center items-center p-4">
       <div className="max-w-4xl w-full">
-        {/* Desktop View */}
+       <h1 className="text-center mb-4 text-7xl">Our Services</h1>
         <div className="hidden md:flex flex-col items-center text-center">
           <div className="flex">
             {tabs.map((tab, index) => (
