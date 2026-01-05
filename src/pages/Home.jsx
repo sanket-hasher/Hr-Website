@@ -6,6 +6,7 @@ import Services from '../components/Services';
 import About from '../components/About';
 import WhyChooseUs from '../components/WhyChooseUs';
 import IndustriesWeServe from '../components/IndustriesWeServe';
+import TeamSection from '../components/TeamSection';
 
 const Home = () => {
   const servicesRef = useRef(null);
@@ -26,6 +27,7 @@ const Home = () => {
       <WhyChooseUs/>
       <Services refProp={servicesRef} activeTab={activeTab} setActiveTab={setActiveTab} />
        <IndustriesWeServe/>
+       <TeamSection/>
       <Footer />
     </div>
   );

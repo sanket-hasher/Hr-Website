@@ -59,7 +59,7 @@ const IndustriesWeServeSlider = () => {
       <div className="max-w-7xl mx-auto space-y-20">
 
         {/* Heading */}
-        <h2 className="text-4xl md:text-5xl font-bold text-center">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-[#D4AF37]">
           Industries We Serve
         </h2>
 
@@ -96,7 +96,7 @@ const IndustriesWeServeSlider = () => {
 
         {/* What We Provide */}
         <section className="bg-white rounded-2xl shadow-lg p-10">
-          <h3 className="text-3xl font-bold text-center mb-8">
+          <h3 className="text-3xl font-bold text-center mb-8 text-[#D4AF37]">
             What We Provide
           </h3>
 

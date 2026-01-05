@@ -49,11 +49,11 @@ const About = () => {
   ];
 
   return (
-    <section className="bg-black text-gray-300 py-20">
+    <section className="bg-white text-black py-20">
       <div className="max-w-7xl mx-auto px-4 md:px-8 space-y-20">
 
         {/* Header */}
-        <h1 className="text-4xl md:text-5xl font-bold text-white">
+        <h1 className="text-4xl md:text-5xl font-bold text-[#D4AF37]">
           About Us
         </h1>
 
@@ -69,7 +69,7 @@ const About = () => {
 
           <div className="w-full lg:w-1/2 space-y-4 leading-relaxed">
             <p>
-              <span className="text-white font-semibold">HRSouk</span> is a
+              <span className="text-[#D4AF37] font-semibold">HRSouk</span> is a
               dedicated HR solutions partner focused on simplifying and
               strengthening how organizations manage their people.
             </p>
@@ -88,7 +88,7 @@ const About = () => {
 
         {/* Company Overview */}
         <section>
-          <h2 className="text-3xl font-bold text-white mb-4">
+          <h2 className="text-3xl font-bold text-[#D4AF37] mb-4">
             Company Overview
           </h2>
           <p>
@@ -101,21 +101,21 @@ const About = () => {
 
         {/* Vision & Mission */}
         <section className="grid md:grid-cols-2 gap-10">
-          <div className="bg-gray-900 p-6 rounded-xl border-l-4 border-blue-500">
+          <div className="bg-[#7A0F2A] p-6 rounded-xl border-l-4 border-[#D4AF37]">
             <h3 className="text-2xl font-semibold text-white mb-3">
               Our Vision
             </h3>
-            <p>
+            <p className="text-[#CFC6BC]">
               To be a trusted HR partner delivering smart, efficient, and
               people-centric workforce solutions where talent thrives.
             </p>
           </div>
 
-          <div className="bg-gray-900 p-6 rounded-xl border-l-4 border-green-500">
+          <div className="bg-[#7A0F2A] p-6 rounded-xl border-l-4 border-[#D4AF37]">
             <h3 className="text-2xl font-semibold text-white mb-3">
               Our Mission
             </h3>
-            <ul className="list-disc list-inside space-y-2">
+            <ul className="list-disc list-inside space-y-2 text-[#CFC6BC]">
               <li>Deliver reliable and tailored HR services.</li>
               <li>Bridge the gap between talent and opportunity.</li>
               <li>Leverage technology to enhance HR operations.</li>
@@ -127,7 +127,7 @@ const About = () => {
         {/* Approach & Values */}
         <section className="grid lg:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-2xl font-semibold text-white mb-5">
+            <h3 className="text-2xl font-semibold text-[#D4AF37] mb-5">
               Our Approach
             </h3>
             <ul className="space-y-3">
@@ -140,10 +140,10 @@ const About = () => {
           </div>
 
           <div>
-            <h3 className="text-2xl font-semibold text-white mb-5">
+            <h3 className="text-2xl font-semibold text-[#D4AF37] mb-5">
               Our Values
             </h3>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-4 text-[#CFC6BC]">
               {[
                 "Integrity",
                 "Excellence",
@@ -154,7 +154,7 @@ const About = () => {
               ].map((value, index) => (
                 <span
                   key={index}
-                  className="bg-gray-900 px-4 py-2 rounded-lg text-center"
+                  className="bg-[#7A0F2A] px-4 py-2 rounded-lg text-center"
                 >
                   {value}
                 </span>

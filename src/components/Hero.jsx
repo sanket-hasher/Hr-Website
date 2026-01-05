@@ -7,12 +7,11 @@ const Hero = () => {
       className="relative h-[70vh] flex justify-center items-center text-white bg-cover bg-center"
       style={{ backgroundImage: `url(${heroImg})` }}
     >
-      <div className="absolute inset-0 bg-black/60"></div>
+      <div className="absolute inset-0 bg-red-700/40"></div>
       
-      <p className="relative text-base md:text-7xl font-bold leading-tight text-center">
-        <span className="block">Enabling</span>
-        <span className="block">Seamless Talent</span>
-        <span className="block">Excellence</span>
+      <p className="relative text-4xl md:text-7xl font-bold leading-tight text-center">
+        <span className="block">Enabling Seamless</span>
+        <span className="block text-[#D4AF37]">Talent Excellence</span>
       </p>
     </div>
   )
