@@ -1,44 +1,49 @@
 import React from 'react';
 
 const About = () => {
+  const pillars = ["Trust", "Innovation", "Efficiency", "People"];
+
   return (
-    <section id="about" className="py-24 bg-transparent scroll-mt-24">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+    <section className="py-12 bg-transparent">
+      <div className="max-w-7xl mx-auto px-8">
+        <div className="flex flex-col lg:flex-row gap-20 items-start">
           
-          {/* Visual with Blurry Overlay */}
-          <div className="relative group">
-            <div className="aspect-video rounded-[2rem] overflow-hidden shadow-2xl border border-white/20">
-              <img 
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80" 
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                alt="Our Office"
-              />
+          {/* LEFT: NARRATIVE CORE */}
+          <div className="lg:w-3/5 space-y-10">
+            <div className="space-y-4">
+              <span className="text-aurora-teal font-semibold tracking-[0.5em] uppercase text-[10px] block">
+                The Foundation
+              </span>
+              <h2 className="text-4xl md:text-5xl font-serif text-slate-900 font-light leading-tight">
+                Built on four <span className="italic text-aurora-teal">powerful pillars</span>
+              </h2>
             </div>
-            {/* Blurry Stats Badge */}
-            <div className="absolute -bottom-6 -right-6 bg-aurora-teal/90 backdrop-blur-lg p-8 rounded-3xl shadow-2xl border border-white/20 text-obsidian">
-              <p className="text-5xl font-black">10+</p>
-              <p className="text-[10px] uppercase font-bold tracking-widest opacity-80">Years Experience</p>
+            
+            <div className="max-w-xl space-y-6 text-slate-700 font-normal leading-relaxed text-[15px]">
+              <p className="text-lg text-slate-900 font-medium leading-snug">
+                HRSouk is a dedicated HR solutions platform delivering streamlined, practical, and people-centric services for modern businesses.
+              </p>
+              <p className="opacity-90">
+                Guided by the belief that the right talent transforms organizations, we provide efficient Recruitment Support, HR Consulting, Onboarding Assistance, and Workforce Management.
+              </p>
+              <p className="opacity-90">
+                With a strong focus on reliability and transparency, HRSouk partners with startups and SMEs to build stronger teams.
+              </p>
             </div>
           </div>
 
-          {/* Content */}
-          <div className="space-y-6">
-            <h2 className="text-aurora-teal font-black tracking-[0.3em] uppercase text-xs">About Us</h2>
-            <h3 className="text-5xl font-black text-obsidian leading-tight">Company Overview</h3>
-            <p className="text-slate-600 text-lg leading-relaxed">
-              At HRSouk, we believe people are an organization's strongest asset. Our mission is to empower businesses with the right talent and streamlined HR systems.
-            </p>
-            
-            <div className="grid grid-cols-2 gap-6 pt-6">
-              <div className="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm hover:border-aurora-teal transition-colors">
-                <h4 className="font-black text-obsidian mb-2">Our Vision</h4>
-                <p className="text-sm text-slate-500 italic">To be a trusted partner delivering smart, efficient solutions.</p>
-              </div>
-              <div className="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm hover:border-aurora-teal transition-colors">
-                <h4 className="font-black text-obsidian mb-2">Our Mission</h4>
-                <p className="text-sm text-slate-500 italic">Bridge the gap between talent and opportunity.</p>
-              </div>
+          {/* RIGHT: PILLAR LIST */}
+          <div className="lg:w-2/5 w-full pt-12 lg:pt-4">
+            <div className="flex flex-col divide-y divide-slate-300/60 border-t border-slate-300/60">
+              {pillars.map((pillar, index) => (
+                <div key={index} className="group py-7 flex items-center transition-all duration-500 hover:pl-8">
+                  <div className="flex items-center gap-10">
+                    <span className="text-aurora-teal/60 font-bold text-[10px] tracking-widest">0{index + 1}</span>
+                    <h4 className="text-slate-900 font-semibold uppercase tracking-[0.4em] text-[12px] group-hover:text-aurora-teal transition-all duration-300">{pillar}</h4>
+                  </div>
+                </div>
+              ))}
+              <div className="border-b border-slate-300/60"></div>
             </div>
           </div>
         </div>
@@ -47,4 +52,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default About; // ENSURE THIS LINE IS PRESENT

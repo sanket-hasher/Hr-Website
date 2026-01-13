@@ -2,48 +2,32 @@ import React from 'react';
 
 const TeamContact = () => {
   return (
-    <section id="team" className="py-24 bg-transparent scroll-mt-24">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="bg-white/10 backdrop-blur-2xl rounded-[3rem] border border-white/40 p-10 md:p-16 shadow-2xl flex flex-col lg:flex-row gap-16 items-center">
-          
-          {/* Fixed Image Side */}
-          <div className="w-full lg:w-1/2">
-            <div className="relative group rounded-3xl overflow-hidden shadow-2xl border border-white/20 aspect-[4/5] lg:aspect-auto lg:h-[550px]">
-              {/* Professional Team Image */}
-              <img 
-                src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1974&auto=format&fit=crop" 
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100"
-                alt="HR Souk Team Collaboration"
-                onError={(e) => {
-                  e.target.src = "https://via.placeholder.com/600x800/e2e8f0/64748b?text=HR+Souk+Team";
-                }}
-              />
-              {/* Elite Shimmer Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-aurora-teal/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+    <section id="team" className="py-10 bg-transparent scroll-mt-20">
+      <div className="max-w-7xl mx-auto px-8">
+        <div className="flex flex-col lg:flex-row gap-20 items-start">
+          <div className="lg:w-1/2 space-y-8">
+            <div className="w-12 h-[3px] bg-aurora-teal"></div>
+            <h2 className="text-4xl md:text-5xl font-serif text-slate-900 font-bold uppercase tracking-tight">Meet Our <span className="italic font-light text-aurora-teal">Team</span></h2>
+            <div className="space-y-6 text-slate-800 leading-relaxed text-[15px]">
+              <p className="font-bold text-lg">At HR Souk, our team is the backbone of everything we do. We share a common vision — to simplify hiring and empower businesses with the right talent at the right time.</p>
+              <p className="text-slate-600 font-light">Each member of our team brings deep domain expertise across industries such as IT, Engineering, Aviation, Healthcare, Finance, and other sector recruitment in the GCC region.</p>
+              <p className="text-slate-600 font-light">What sets the HR Souk team apart is our commitment to integrity, transparency, and long-term partnerships. We believe in nurturing relationships, not transactions.</p>
+              <div className="pl-6 border-l-4 border-aurora-teal py-2 bg-aurora-teal/5">
+                <p className="italic font-bold text-slate-900">"Together, we make HR Souk more than a recruitment service — we are your dedicated talent partners."</p>
+              </div>
             </div>
           </div>
-
-          {/* Content Side */}
-          <div className="w-full lg:w-1/2 text-left">
-            <h2 className="text-4xl font-serif font-black text-slate-900 mb-2 uppercase tracking-tight">Meet Our Team</h2>
-            <div className="w-20 h-1.5 bg-aurora-teal mb-8 rounded-full"></div>
-            
-            <div className="space-y-6 text-slate-700 leading-relaxed">
-              <p className="font-bold text-lg text-slate-900">
-                At HR Souk, our team is the backbone of everything we do. We are a diverse group of HR professionals, talent acquisition specialists, and workforce strategists who share a common vision — to simplify hiring and empower businesses with the right talent at the right time.
-              </p>
-              
-              <p className="text-sm">
-                Each member of our team brings deep domain expertise across industries such as IT, Engineering, Aviation, Healthcare, Finance, and other sector recruitment in the GCC region. With a blend of experience, precision, and people-first approach, we work closely with clients to understand their needs and deliver solutions that truly fit.
-              </p>
-              
-              <p className="text-sm">
-                What sets the HR Souk team apart is our commitment to integrity, transparency, and long-term partnerships. We believe in nurturing relationships, not transactions. Whether it's a challenging niche role, large-scale hiring, or strategic HR advisory, our team works with passion, agility, and attention to detail.
-              </p>
-              
-              <p className="font-bold text-slate-900 italic border-l-4 border-aurora-teal pl-4 py-2">
-                Together, we make HR Souk more than a recruitment service — we are your dedicated talent partners, helping your organization grow stronger every day.
-              </p>
+          <div className="lg:w-1/2 w-full pt-10 lg:pt-0">
+            <div className="p-10 md:p-12 rounded-[3rem] bg-white/40 backdrop-blur-3xl border border-white/60 shadow-2xl">
+              <form className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <input type="text" placeholder="Full Name" className="w-full px-6 py-4 rounded-2xl bg-white/50 border border-slate-200/40 text-sm font-light" />
+                  <input type="text" placeholder="Company" className="w-full px-6 py-4 rounded-2xl bg-white/50 border border-slate-200/40 text-sm font-light" />
+                </div>
+                <input type="email" placeholder="Official Email" className="w-full px-6 py-4 rounded-2xl bg-white/50 border border-slate-200/40 text-sm font-light" />
+                <input type="tel" placeholder="Phone No" className="w-full px-6 py-4 rounded-2xl bg-white/50 border border-slate-200/40 text-sm font-light" />
+                <button className="w-full py-5 rounded-2xl bg-slate-900 text-white font-black tracking-[0.4em] uppercase text-[10px] hover:bg-aurora-teal transition-all duration-500">Schedule a Consultation</button>
+              </form>
             </div>
           </div>
         </div>

@@ -5,10 +5,9 @@
   --color-aurora-teal: #2dd4bf;
 }
 
-/* Global aristocratic background with silver-silk flow */
 html {
-  /* Reserves space for the fixed navbar during scrolling */
-  scroll-padding-top: 100px; 
+  /* Adjusted for the sleek navbar and zero-gap layout */
+  scroll-padding-top: 70px; 
   scroll-behavior: smooth;
 }
 
@@ -21,13 +20,7 @@ body {
   @apply text-slate-900 antialiased relative;
 }
 
-@keyframes silverFlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* THE NOISE TEXTURE: Applies a high-end grainy overlay to the whole webpage */
+/* THE GLOBAL NOISE TEXTURE */
 body::before {
   content: "";
   position: fixed;
@@ -38,7 +31,13 @@ body::before {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
-/* Professional Glass Partitions */
+/* Zero-Gap Glass Partitions */
 .glass-partition {
-  @apply border-y border-white/40 bg-white/5 backdrop-blur-md shadow-inner transition-all duration-1000;
+  @apply border-b border-white/30 bg-white/5 backdrop-blur-md;
+}
+
+@keyframes silverFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }

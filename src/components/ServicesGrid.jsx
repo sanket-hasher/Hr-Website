@@ -1,9 +1,5 @@
 import React from 'react';
 
-/**
- * ServicesGrid Component - Professional SVG Edition
- * Replaces the target icon with a high-end talent connectivity vector.
- */
 const ServicesGrid = () => {
   const services = [
     {
@@ -11,12 +7,9 @@ const ServicesGrid = () => {
       desc: "AI-driven recruitment and data-powered hiring strategies to find elite talent.",
       icon: (
         <svg className="w-12 h-12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          {/* Focal Lens / Search Element */}
           <circle cx="11" cy="11" r="7" stroke="#2dd4bf" strokeWidth="2"/>
-          {/* Talent Silhouette in focus */}
           <path d="M11 8C12.1046 8 13 8.89543 13 10C13 11.1046 12.1046 12 11 12C9.89543 12 9 11.1046 9 10C9 8.89543 9.89543 8 11 8Z" fill="#0f1115" opacity="0.4"/>
           <path d="M7 15.5C7 13.567 8.79086 12 11 12C13.2091 12 15 13.567 15 15.5" stroke="#0f1115" strokeWidth="1.5" strokeLinecap="round" opacity="0.4"/>
-          {/* Connection Line */}
           <path d="M20 20L16 16" stroke="#2dd4bf" strokeWidth="2" strokeLinecap="round"/>
         </svg>
       )
@@ -56,22 +49,22 @@ const ServicesGrid = () => {
   ];
 
   return (
-    <section id="services" className="py-24 bg-transparent">
+    <section className="py-6 bg-transparent">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-aurora-teal font-black tracking-[0.4em] uppercase text-[10px] mb-4">Solutions</h2>
-        <h3 className="text-5xl font-serif text-slate-900 mb-16 tracking-tight">Comprehensive HR Services</h3>
+        <h2 className="text-aurora-teal font-black tracking-[0.4em] uppercase text-[10px] mb-2">Solutions</h2>
+        <h3 className="text-4xl font-serif text-slate-900 mb-8 tracking-tight">Comprehensive HR Services</h3>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((s, i) => (
-            <div key={i} className="group p-8 rounded-[2.5rem] bg-white/40 backdrop-blur-xl border border-white/60 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-              <div className="mb-8 flex justify-center transform group-hover:scale-110 transition-transform duration-500">
+            <div key={i} className="group p-6 rounded-[2rem] bg-white/40 backdrop-blur-xl border border-white/60 shadow-lg hover:shadow-xl transition-all duration-500">
+              <div className="mb-6 flex justify-center transform group-hover:scale-110 transition-transform duration-500">
                 {s.icon}
               </div>
-              <h4 className="text-xl font-bold text-slate-900 mb-4">{s.title}</h4>
-              <p className="text-slate-600 leading-relaxed text-sm mb-8">
+              <h4 className="text-lg font-bold text-slate-900 mb-3">{s.title}</h4>
+              <p className="text-slate-600 leading-relaxed text-xs mb-6">
                 {s.desc}
               </p>
-              <button className="text-aurora-teal font-black text-[10px] uppercase tracking-widest flex items-center gap-2 mx-auto hover:gap-3 transition-all">
+              <button className="text-aurora-teal font-black text-[9px] uppercase tracking-widest flex items-center gap-2 mx-auto hover:gap-3 transition-all">
                 Learn More <span>→</span>
               </button>
             </div>
