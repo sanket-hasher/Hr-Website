@@ -11,9 +11,8 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="relative min-h-screen selection:bg-aurora-teal/30">
+    <div className="relative min-h-screen">
       <Navbar />
-      {/* Reduced vertical gaps globally */}
       <main className="flex flex-col gap-0">
         <Hero />
         <About />
@@ -23,7 +22,8 @@ function App() {
         <CoreValues />
         <TeamContact />
       </main>
-      <Footer />
+      {/* THE ONLY PLACE THE FOOTER SHOULD BE */}
+      <Footer /> 
     </div>
   );
 }

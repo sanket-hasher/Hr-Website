@@ -22,7 +22,6 @@ const Navbar = () => {
     };
   }, []);
 
-  // LINK MAPPING: 'Why Us' now correctly points to #why-us
   const whoWeAreLinks = [
     { name: 'Why Us', href: '#why-us' },
     { name: 'Vision & Mission', href: '#vision-mission' },
@@ -36,25 +35,28 @@ const Navbar = () => {
     return base + contrast;
   };
 
+  const calibriStyle = { fontFamily: 'Calibri, sans-serif' };
+
   return (
-    <nav className="fixed w-full z-[100] px-6 py-4 transition-all duration-500">
+    <nav className="fixed w-full z-[100] px-6 py-4 transition-all duration-500" style={calibriStyle}>
       <div className={`max-w-7xl mx-auto px-8 py-1.5 flex items-center justify-between rounded-2xl transition-all duration-700 border ${
-        isScrolled 
-          ? 'bg-white/40 backdrop-blur-3xl border-white/60 shadow-2xl scale-[0.99]' 
-          : 'bg-white/10 backdrop-blur-2xl border-white/20'
+        isScrolled ? 'bg-white/40 backdrop-blur-3xl border-white/60 shadow-2xl scale-[0.99]' : 'bg-white/10 backdrop-blur-2xl border-white/20'
       }`}>
         
         <div className="flex items-center">
-          <div className="relative flex items-center group cursor-pointer" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
-            <div className={`absolute -inset-4 rounded-full blur-2xl transition-all duration-700 ${isScrolled ? 'bg-white/40' : 'bg-white/10'}`}></div>
-            <img src={logo} alt="HR Souk" className="h-16 md:h-20 w-auto object-contain z-50 filter drop-shadow-[0_0_2px_rgba(255,255,255,1)]"/>
-          </div>
+          <img 
+            src={logo} 
+            alt="HR Souk" 
+            className="h-16 md:h-20 w-auto object-contain z-50 filter drop-shadow-[0_0_2px_rgba(255,255,255,1)] cursor-pointer" 
+            onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
+          />
         </div>
 
         <div className="hidden lg:flex items-center gap-10">
           <div className="flex items-center gap-10">
             <a href="#" className={getNavLinkClass()}>Home</a>
 
+            {/* WHO WE ARE DROPDOWN */}
             <div className="relative" ref={whoRef}>
               <button onClick={() => {setIsWhoOpen(!isWhoOpen); setIsSocialOpen(false);}} className={getNavLinkClass()}>
                 Who We Are
@@ -74,6 +76,7 @@ const Navbar = () => {
               </div>
             </div>
 
+            {/* RESTORED SOCIAL REACH DROPDOWN */}
             <div className="relative" ref={socialRef}>
               <button onClick={() => {setIsSocialOpen(!isSocialOpen); setIsWhoOpen(false);}} className={getNavLinkClass()}>
                 Social Reach Out
@@ -91,7 +94,8 @@ const Navbar = () => {
             </div>
           </div>
 
-          <a href="#team" className="bg-slate-900 text-white px-7 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-aurora-teal shadow-xl transition-all">
+          {/* CONTACT BUTTON */}
+          <a href="#footer" className="bg-slate-900 text-white px-7 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-aurora-teal shadow-xl active:scale-95 transition-all">
             Contact Us
           </a>
         </div>
