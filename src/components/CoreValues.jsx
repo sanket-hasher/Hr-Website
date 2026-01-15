@@ -10,14 +10,20 @@ const CoreValues = () => {
     { title: "Partnership", num: "06" }
   ];
 
+  // Applying the requested Calibri font stack
+  const calibriStyle = { 
+    fontFamily: 'Calibri, sans-serif' 
+  };
+
   return (
-    <section className="py-16 bg-transparent border-t border-white/20">
+    <section className="py-16 bg-transparent border-t border-white/20" style={calibriStyle}>
       <div className="max-w-6xl mx-auto px-8">
         {/* COMPACT HEADER */}
         <div className="text-center mb-12">
           <span className="text-aurora-teal font-black tracking-[0.6em] uppercase text-[8px] block mb-2 opacity-80">
             The DNA of HRSouk
           </span>
+          {/* Main heading remains serif for elite branding */}
           <h2 className="text-3xl md:text-4xl font-serif text-slate-900 font-light tracking-tight">
             Our Core <span className="italic text-aurora-teal">Values</span>
           </h2>
@@ -34,12 +40,12 @@ const CoreValues = () => {
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
               
               <div className="relative z-10 flex flex-col items-center text-center">
-                {/* HIGH-VISIBILITY NUMBERING */}
+                {/* HIGH-VISIBILITY NUMBERING (Calibri) */}
                 <span className="text-aurora-teal font-bold text-[10px] tracking-[0.3em] mb-4 block group-hover:scale-110 transition-transform">
                   {v.num}
                 </span>
 
-                {/* SHARPER TYPOGRAPHY */}
+                {/* SHARPER TYPOGRAPHY (Calibri Bold) */}
                 <h4 className="text-slate-900 font-black uppercase tracking-[0.4em] text-[11px] group-hover:text-aurora-teal transition-colors duration-300">
                   {v.title}
                 </h4>

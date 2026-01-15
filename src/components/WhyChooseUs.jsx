@@ -9,21 +9,29 @@ const WhyChooseUs = () => {
     { title: "Technology-Enabled HR" }
   ];
 
+  // Applying the requested Calibri font stack with normal weight
+  const calibriStyle = { 
+    fontFamily: 'Calibri, "Candara", "Segoe UI", sans-serif',
+    fontWeight: '400' 
+  };
+
   return (
-    <section id="why-us" className="py-10 bg-transparent scroll-mt-20">
+    <section id="why-us" className="py-10 bg-transparent scroll-mt-20" style={calibriStyle}>
       <div className="max-w-[1600px] mx-auto px-8">
         
         {/* REFINED HEADER */}
         <div className="text-center mb-12">
           <div className="flex justify-center items-center gap-4 mb-2">
             <div className="h-[2px] w-12 bg-aurora-teal"></div>
-            <span className="text-aurora-teal font-black tracking-[0.6em] uppercase text-[10px]">
+            {/* Tagline inherits Calibri Normal from parent style */}
+            <span className="text-aurora-teal tracking-[0.6em] uppercase text-[10px]">
               Superiority
             </span>
             <div className="h-[2px] w-12 bg-aurora-teal"></div>
           </div>
-          <h2 className="text-4xl md:text-5xl font-serif text-slate-900 font-bold tracking-tight">
-            Why <span className="italic text-aurora-teal font-light">Choose Us</span>
+          {/* Section Heading keeps Serif for branding but uses font-light */}
+          <h2 className="text-4xl md:text-5xl font-serif text-slate-900 font-light tracking-tight">
+            Why <span className="italic text-aurora-teal">Choose Us</span>
           </h2>
         </div>
 
@@ -38,13 +46,13 @@ const WhyChooseUs = () => {
               <div className="absolute top-0 left-0 w-full h-1.5 bg-aurora-teal transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></div>
               
               <div className="relative z-10 flex flex-col items-center text-center">
-                {/* BOLD NUMBERING */}
-                <span className="text-aurora-teal font-black text-[14px] tracking-[0.2em] mb-6 block group-hover:scale-125 transition-transform duration-500">
+                {/* NUMBERING (Calibri Normal) */}
+                <span className="text-aurora-teal text-[14px] tracking-[0.2em] mb-6 block group-hover:scale-125 transition-transform duration-500">
                   0{i + 1}
                 </span>
 
-                {/* HIGH-VISIBILITY TYPOGRAPHY */}
-                <h4 className="text-slate-900 font-black uppercase tracking-[0.2em] text-[12px] leading-relaxed group-hover:text-aurora-teal transition-all duration-500 h-12 flex items-center">
+                {/* FEATURE TITLES (Calibri Normal) */}
+                <h4 className="text-slate-900 uppercase tracking-[0.2em] text-[12px] leading-relaxed group-hover:text-aurora-teal transition-all duration-500 h-12 flex items-center justify-center">
                   {f.title}
                 </h4>
 

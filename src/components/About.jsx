@@ -3,8 +3,15 @@ import React from 'react';
 const About = () => {
   const pillars = ["Trust", "Innovation", "Efficiency", "People"];
 
+  // Applying Calibri font stack for professional body content
+  const calibriStyle = { 
+    fontFamily: 'Calibri, sans-serif', 
+    fontSize: '14px', 
+    color: '#1e293b' 
+  };
+
   return (
-    <section className="py-12 bg-transparent">
+    <section className="py-12 bg-transparent font-['Calibri']">
       <div className="max-w-7xl mx-auto px-8">
         <div className="flex flex-col lg:flex-row gap-20 items-start">
           
@@ -14,13 +21,15 @@ const About = () => {
               <span className="text-aurora-teal font-semibold tracking-[0.5em] uppercase text-[10px] block">
                 The Foundation
               </span>
+              {/* Heading keeps serif for branding */}
               <h2 className="text-4xl md:text-5xl font-serif text-slate-900 font-light leading-tight">
                 Built on four <span className="italic text-aurora-teal">powerful pillars</span>
               </h2>
             </div>
             
-            <div className="max-w-xl space-y-6 text-slate-700 font-normal leading-relaxed text-[15px]">
-              <p className="text-lg text-slate-900 font-medium leading-snug">
+            {/* Body text strictly in Calibri */}
+            <div className="max-w-xl space-y-6 text-slate-700 leading-relaxed" style={calibriStyle}>
+              <p className="text-lg text-slate-900 font-bold leading-snug">
                 HRSouk is a dedicated HR solutions platform delivering streamlined, practical, and people-centric services for modern businesses.
               </p>
               <p className="opacity-90">
@@ -39,7 +48,9 @@ const About = () => {
                 <div key={index} className="group py-7 flex items-center transition-all duration-500 hover:pl-8">
                   <div className="flex items-center gap-10">
                     <span className="text-aurora-teal/60 font-bold text-[10px] tracking-widest">0{index + 1}</span>
-                    <h4 className="text-slate-900 font-semibold uppercase tracking-[0.4em] text-[12px] group-hover:text-aurora-teal transition-all duration-300">{pillar}</h4>
+                    <h4 className="text-slate-900 font-bold uppercase tracking-[0.4em] text-[12px] group-hover:text-aurora-teal transition-all duration-300">
+                      {pillar}
+                    </h4>
                   </div>
                 </div>
               ))}
@@ -52,4 +63,4 @@ const About = () => {
   );
 };
 
-export default About; // ENSURE THIS LINE IS PRESENT
+export default About;

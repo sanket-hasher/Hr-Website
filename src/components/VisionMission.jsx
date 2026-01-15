@@ -1,8 +1,13 @@
 import React from 'react';
 
 const VisionMission = () => {
+  // Applying Calibri font stack for professional consistency
+  const calibriStyle = { 
+    fontFamily: 'Calibri, "Candara", "Segoe UI", sans-serif' 
+  };
+
   return (
-    <section id="vision-mission" className="py-10 bg-transparent scroll-mt-20">
+    <section id="vision-mission" className="py-10 bg-transparent scroll-mt-20" style={calibriStyle}>
       <div className="max-w-7xl mx-auto px-8">
         
         {/* SECTION HEADER */}
@@ -14,6 +19,7 @@ const VisionMission = () => {
             </span>
             <div className="h-[1px] w-8 bg-aurora-teal/30"></div>
           </div>
+          {/* Section Heading keeps Serif for branding */}
           <h2 className="text-4xl md:text-5xl font-serif text-slate-900 font-light leading-tight">
             Our Purpose & <span className="italic text-aurora-teal">Direction</span>
           </h2>
@@ -30,6 +36,7 @@ const VisionMission = () => {
               <span className="text-aurora-teal font-bold tracking-[0.3em] uppercase text-[10px] block">The Future</span>
               <h3 className="text-2xl font-serif text-slate-900 font-normal">Our Vision</h3>
               <div className="w-12 h-[2px] bg-aurora-teal/40 group-hover:w-full transition-all duration-700"></div>
+              {/* Calibri Body Content */}
               <p className="text-slate-600 text-lg font-light leading-relaxed italic">
                 Workplaces where people are treated fairly, supported properly, and enabled to succeed.
               </p>
@@ -44,6 +51,7 @@ const VisionMission = () => {
               <span className="text-aurora-teal font-bold tracking-[0.3em] uppercase text-[10px] block">The Action</span>
               <h3 className="text-2xl font-serif text-slate-900 font-normal">Our Mission</h3>
               <div className="w-12 h-[2px] bg-aurora-teal/40 group-hover:w-full transition-all duration-700"></div>
+              {/* Calibri Body Content */}
               <p className="text-slate-600 text-lg font-light leading-relaxed italic">
                 We partner with organisations to reduce risk, improve people management, and support growth through expert, commercially focused HR advice.
               </p>

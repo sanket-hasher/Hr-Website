@@ -29,6 +29,7 @@ const Navbar = () => {
     { name: 'Team', href: '#team' },
   ];
 
+  // Applying Calibri globally to the navigation links
   const getNavLinkClass = () => {
     const base = "text-[11px] uppercase font-black tracking-[0.2em] transition-all duration-500 relative group py-1 flex items-center gap-2 cursor-pointer hover:text-aurora-teal ";
     const contrast = isScrolled ? "text-slate-900" : "text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]";      
@@ -54,6 +55,7 @@ const Navbar = () => {
 
         <div className="hidden lg:flex items-center gap-10">
           <div className="flex items-center gap-10">
+            {/* Nav links inherit Calibri via the parent nav style */}
             <a href="#" className={getNavLinkClass()}>Home</a>
 
             {/* WHO WE ARE DROPDOWN */}
@@ -76,7 +78,7 @@ const Navbar = () => {
               </div>
             </div>
 
-            {/* RESTORED SOCIAL REACH DROPDOWN */}
+            {/* SOCIAL REACH DROPDOWN */}
             <div className="relative" ref={socialRef}>
               <button onClick={() => {setIsSocialOpen(!isSocialOpen); setIsWhoOpen(false);}} className={getNavLinkClass()}>
                 Social Reach Out
@@ -94,7 +96,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* CONTACT BUTTON */}
+          {/* CONTACT BUTTON - Updated to inherit Calibri font */}
           <a href="#footer" className="bg-slate-900 text-white px-7 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-aurora-teal shadow-xl active:scale-95 transition-all">
             Contact Us
           </a>

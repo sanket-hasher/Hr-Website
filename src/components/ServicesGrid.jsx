@@ -48,11 +48,20 @@ const ServicesGrid = () => {
     }
   ];
 
+  // Applying Calibri font stack for professional consistency
+  const calibriStyle = { fontFamily: 'Calibri, sans-serif' };
+
   return (
-    <section className="py-6 bg-transparent">
+    <section className="py-6 bg-transparent" style={calibriStyle}>
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-aurora-teal font-black tracking-[0.4em] uppercase text-[10px] mb-2">Solutions</h2>
-        <h3 className="text-4xl font-serif text-slate-900 mb-8 tracking-tight">Comprehensive HR Services</h3>
+        <h2 className="text-aurora-teal font-black tracking-[0.4em] uppercase text-[10px] mb-2">
+          Solutions
+        </h2>
+        
+        {/* Main Heading keeps Serif for branding */}
+        <h3 className="text-4xl font-serif text-slate-900 mb-8 tracking-tight">
+          Comprehensive HR Services
+        </h3>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((s, i) => (
@@ -60,10 +69,17 @@ const ServicesGrid = () => {
               <div className="mb-6 flex justify-center transform group-hover:scale-110 transition-transform duration-500">
                 {s.icon}
               </div>
-              <h4 className="text-lg font-bold text-slate-900 mb-3">{s.title}</h4>
-              <p className="text-slate-600 leading-relaxed text-xs mb-6">
+              
+              {/* Calibri Bold for Service Titles */}
+              <h4 className="text-lg font-bold text-slate-900 mb-3">
+                {s.title}
+              </h4>
+              
+              {/* Calibri for Descriptions at 14px equivalent */}
+              <p className="text-slate-600 leading-relaxed text-[13px] mb-6">
                 {s.desc}
               </p>
+              
               <button className="text-aurora-teal font-black text-[9px] uppercase tracking-widest flex items-center gap-2 mx-auto hover:gap-3 transition-all">
                 Learn More <span>→</span>
               </button>
