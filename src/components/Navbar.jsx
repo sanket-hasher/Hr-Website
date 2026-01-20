@@ -48,7 +48,7 @@ const Navbar = () => {
           <img 
             src={logo} 
             alt="HR Souk" 
-            className="h-16 md:h-20 w-auto object-contain z-50 filter drop-shadow-[0_0_2px_rgba(255,255,255,1)] cursor-pointer" 
+            className="h-16 md:h-20 w-auto object-contain z-50 filter brightness-125 contrast-110 cursor-pointer" 
             onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
           />
         </div>
