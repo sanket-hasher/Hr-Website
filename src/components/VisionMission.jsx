@@ -44,12 +44,6 @@ const VisionMission = () => {
                   Workplaces where people are treated fairly, supported properly, and enabled to succeed.
                 </p>
               </div>
-
-              {/* Hashtags as per reference style */}
-              <div className="pt-8 flex gap-4 text-[12px] text-white/50 tracking-wider">
-                <span>#EmployeeCentric</span>
-                <span>#FutureOfWork</span>
-              </div>
             </div>
           </div>
 
@@ -74,12 +68,6 @@ const VisionMission = () => {
                 <p className="text-white text-lg md:text-xl font-normal leading-snug">
                   We partner with organisations to reduce risk, improve people management, and support growth through expert, commercially focused HR advice.
                 </p>
-              </div>
-
-              {/* Hashtags as per reference style */}
-              <div className="pt-8 flex gap-4 text-[12px] text-white/40 tracking-wider">
-                <span>#StrategicHR</span>
-                <span>#BusinessGrowth</span>
               </div>
             </div>
           </div>

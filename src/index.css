@@ -1,8 +1,18 @@
 @import "tailwindcss";
 
+/* IMPORTING PREMIUM TYPOGRAPHY 
+  Syne: Bold, architectural, and "cool" for high-impact headings.
+  Plus Jakarta Sans: Clean, modern, and professional for body content.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600&family=Syne:wght@400;500;600;700;800&display=swap');
+
 @theme {
   --color-obsidian: #0f1115;
   --color-aurora-teal: #2dd4bf;
+  
+  /* Defining the new font-family variables */
+  --font-heading: 'Syne', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
 }
 
 html {
@@ -14,13 +24,18 @@ html {
 body {
   margin: 0;
   padding: 0;
+  /* Setting the global professional body font */
+  font-family: var(--font-body);
+  font-weight: 400;
+  
+  /* Maintaining the Silver-Mesh gradient background */
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%);
   background-size: 400% 400%;
   animation: silverFlow 18s ease-in-out infinite;
   @apply text-slate-900 antialiased relative;
 }
 
-/* THE GLOBAL NOISE TEXTURE */
+/* THE GLOBAL NOISE TEXTURE - Maintained for tactile quality */
 body::before {
   content: "";
   position: fixed;
@@ -29,6 +44,14 @@ body::before {
   z-index: 9999;
   pointer-events: none;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* EYE-CATCHING HEADING SYSTEM 
+  Applying the Syne font to all heading levels for a consistent "cool" look.
+*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  @apply tracking-tighter;
 }
 
 /* Zero-Gap Glass Partitions */
@@ -40,4 +63,10 @@ body::before {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+
+/* Custom selection color to match Aurora Teal */
+::selection {
+  background-color: var(--color-aurora-teal);
+  color: white;
 }
