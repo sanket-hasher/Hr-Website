@@ -10,52 +10,66 @@ const CoreValues = () => {
     { title: "Partnership", num: "06" }
   ];
 
-  // Applying the requested Calibri font stack
+  // Calibri font stack with strictly normal weight for professional clarity
   const calibriStyle = { 
-    fontFamily: 'Calibri, sans-serif' 
+    fontFamily: 'Calibri, "Candara", "Segoe UI", sans-serif',
+    fontWeight: '400'
   };
 
   return (
-    <section className="py-16 bg-transparent border-t border-white/20" style={calibriStyle}>
-      <div className="max-w-6xl mx-auto px-8">
+    <section className="py-24 bg-transparent border-t border-white/10" style={calibriStyle}>
+      <div className="max-w-7xl mx-auto px-8">
+        
         {/* COMPACT HEADER */}
-        <div className="text-center mb-12">
-          <span className="text-aurora-teal font-black tracking-[0.6em] uppercase text-[8px] block mb-2 opacity-80">
-            The DNA of HRSouk
-          </span>
-          {/* Main heading remains serif for elite branding */}
-          <h2 className="text-3xl md:text-4xl font-serif text-slate-900 font-light tracking-tight">
+        <div className="text-center mb-16">
+          <div className="flex justify-center items-center gap-3 mb-3">
+            <div className="h-[1px] w-6 bg-aurora-teal/40"></div>
+            <span className="text-aurora-teal tracking-[0.6em] uppercase text-[9px] opacity-80">
+              The DNA of HRSouk
+            </span>
+            <div className="h-[1px] w-6 bg-aurora-teal/40"></div>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-serif text-slate-900 font-light tracking-tight">
             Our Core <span className="italic text-aurora-teal">Values</span>
           </h2>
         </div>
 
-        {/* COMPACT ENHANCED GLASS GRID */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {/* VIBRANT DYNAMIC GRID */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {values.map((v, i) => (
             <div 
               key={i} 
-              className="group relative p-8 rounded-[1.8rem] bg-white/40 backdrop-blur-3xl border border-white/70 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] overflow-hidden transition-all duration-500 hover:bg-white/60 hover:border-aurora-teal/40 hover:-translate-y-1.5"
+              className="group relative h-48 cursor-default"
             >
-              {/* ENHANCED GLASS GLOW */}
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+              {/* Background Accent Card (Offset shadow effect) */}
+              <div className="absolute inset-0 bg-slate-900/5 rounded-[2rem] translate-x-2 translate-y-2 transition-transform group-hover:translate-x-1 group-hover:translate-y-1 duration-500"></div>
               
-              <div className="relative z-10 flex flex-col items-center text-center">
-                {/* HIGH-VISIBILITY NUMBERING (Calibri) */}
-                <span className="text-aurora-teal font-bold text-[10px] tracking-[0.3em] mb-4 block group-hover:scale-110 transition-transform">
+              {/* Main Content Card */}
+              <div className="relative h-full p-8 rounded-[2rem] bg-white border border-white shadow-xl flex flex-col items-center justify-center text-center overflow-hidden transition-all duration-500 group-hover:bg-gradient-to-br group-hover:from-slate-900 group-hover:to-[#0D9488] group-hover:-translate-y-2">
+                
+                {/* LARGE BACKGROUND NUMBER (Metallic effect) */}
+                <span className="absolute -bottom-4 -right-2 text-slate-100 font-serif italic text-8xl transition-colors duration-500 group-hover:text-white/5 pointer-events-none">
                   {v.num}
                 </span>
 
-                {/* SHARPER TYPOGRAPHY (Calibri Bold) */}
-                <h4 className="text-slate-900 font-black uppercase tracking-[0.4em] text-[11px] group-hover:text-aurora-teal transition-colors duration-300">
-                  {v.title}
-                </h4>
+                <div className="relative z-10 flex flex-col items-center">
+                  {/* ACCENT ICON LINE */}
+                  <div className="w-6 h-[2px] bg-aurora-teal mb-4 group-hover:w-12 group-hover:bg-white transition-all duration-500"></div>
 
-                {/* REFINED ANCHOR */}
-                <div className="mt-5 h-[2px] w-4 bg-slate-300 group-hover:w-12 group-hover:bg-aurora-teal/60 transition-all duration-500"></div>
+                  {/* VALUE TITLE (Calibri Normal) */}
+                  <h4 className="text-slate-900 uppercase tracking-[0.4em] text-[13px] transition-colors duration-500 group-hover:text-white font-normal">
+                    {v.title}
+                  </h4>
+
+                  {/* SUB-TAG (Optional detail for extra "eye-catching" feel) */}
+                  <span className="mt-2 text-[10px] text-aurora-teal/0 group-hover:text-white/60 uppercase tracking-widest transition-all duration-700 translate-y-2 group-hover:translate-y-0">
+                    Core Pillar
+                  </span>
+                </div>
+
+                {/* DYNAMIC SHINE OVERLAY */}
+                <div className="absolute -inset-full bg-gradient-to-tr from-transparent via-white/20 to-transparent rotate-45 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 pointer-events-none"></div>
               </div>
-
-              {/* DYNAMIC AMBIENT REFLECTION */}
-              <div className="absolute -inset-full bg-gradient-to-tr from-transparent via-white/10 to-transparent rotate-45 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 pointer-events-none"></div>
             </div>
           ))}
         </div>
