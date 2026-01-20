@@ -1,60 +1,86 @@
 import React from 'react';
 
 const VisionMission = () => {
-  // Applying Calibri font stack for professional consistency
+  // Calibri font stack for professional consistency
   const calibriStyle = { 
-    fontFamily: 'Calibri, "Candara", "Segoe UI", sans-serif' 
+    fontFamily: 'Calibri, "Candara", "Segoe UI", sans-serif',
+    fontWeight: '400' 
   };
 
   return (
-    <section id="vision-mission" className="py-10 bg-transparent scroll-mt-20" style={calibriStyle}>
+    <section id="vision-mission" className="py-20 bg-transparent scroll-mt-20" style={calibriStyle}>
       <div className="max-w-7xl mx-auto px-8">
         
         {/* SECTION HEADER */}
-        <div className="text-center mb-12">
-          <div className="flex justify-center items-center gap-4 mb-4">
-            <div className="h-[1px] w-8 bg-aurora-teal/30"></div>
-            <span className="text-aurora-teal font-black tracking-[0.5em] uppercase text-[10px]">
-              Strategic Intent
-            </span>
-            <div className="h-[1px] w-8 bg-aurora-teal/30"></div>
-          </div>
-          {/* Section Heading keeps Serif for branding */}
+        <div className="text-center mb-16">
+         
           <h2 className="text-4xl md:text-5xl font-serif text-slate-900 font-light leading-tight">
             Our Purpose & <span className="italic text-aurora-teal">Direction</span>
           </h2>
         </div>
 
-        {/* TWO-COLUMN STRATEGIC GRID */}
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+        {/* TWO-COLUMN VIBRANT GRID */}
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
           
-          {/* VISION BLOCK */}
-          <div className="group relative p-12 rounded-[3rem] bg-white/30 backdrop-blur-3xl border border-white/60 shadow-xl transition-all duration-700 hover:border-aurora-teal/30 hover:-translate-y-2">
-            <div className="absolute top-8 right-10 text-aurora-teal/10 font-serif italic text-6xl">Vision</div>
+          {/* VISION BLOCK - VIBRANT STYLE */}
+          <div className="relative group cursor-default">
+            {/* Background Offset Card (Shadow effect) */}
+            <div className="absolute inset-0 bg-aurora-teal/20 rounded-[2.5rem] translate-x-4 translate-y-4 transition-transform group-hover:translate-x-2 group-hover:translate-y-2 duration-500"></div>
             
-            <div className="relative z-10 space-y-6">
-              <span className="text-aurora-teal font-bold tracking-[0.3em] uppercase text-[10px] block">The Future</span>
-              <h3 className="text-2xl font-serif text-slate-900 font-normal">Our Vision</h3>
-              <div className="w-12 h-[2px] bg-aurora-teal/40 group-hover:w-full transition-all duration-700"></div>
-              {/* Calibri Body Content */}
-              <p className="text-slate-600 text-lg font-light leading-relaxed italic">
-                Workplaces where people are treated fairly, supported properly, and enabled to succeed.
-              </p>
+            {/* Main Gradient Card */}
+            <div className="relative p-10 md:p-12 rounded-[2.5rem] bg-gradient-to-br from-aurora-teal via-[#0D9488] to-slate-900 shadow-2xl overflow-hidden min-h-[320px] flex flex-col justify-between">
+              
+              {/* Decorative Glow */}
+              <div className="absolute -top-20 -right-20 w-64 h-64 bg-white/10 rounded-full blur-3xl group-hover:bg-white/20 transition-colors"></div>
+
+              <div className="space-y-4">
+                <span className="text-white/60 font-normal tracking-[0.3em] uppercase text-[10px] block">
+                  The Future
+                </span>
+                <h3 className="text-3xl font-serif text-white font-normal">Our Vision</h3>
+                <div className="w-12 h-[1px] bg-white/30"></div>
+                
+                <p className="text-white text-xl md:text-2xl font-normal leading-tight">
+                  Workplaces where people are treated fairly, supported properly, and enabled to succeed.
+                </p>
+              </div>
+
+              {/* Hashtags as per reference style */}
+              <div className="pt-8 flex gap-4 text-[12px] text-white/50 tracking-wider">
+                <span>#EmployeeCentric</span>
+                <span>#FutureOfWork</span>
+              </div>
             </div>
           </div>
 
-          {/* MISSION BLOCK */}
-          <div className="group relative p-12 rounded-[3rem] bg-white/30 backdrop-blur-3xl border border-white/60 shadow-xl transition-all duration-700 hover:border-aurora-teal/30 hover:-translate-y-2">
-            <div className="absolute top-8 right-10 text-aurora-teal/10 font-serif italic text-6xl">Mission</div>
+          {/* MISSION BLOCK - VIBRANT STYLE */}
+          <div className="relative group cursor-default">
+            {/* Background Offset Card (Shadow effect) */}
+            <div className="absolute inset-0 bg-slate-900/10 rounded-[2.5rem] translate-x-4 translate-y-4 transition-transform group-hover:translate-x-2 group-hover:translate-y-2 duration-500"></div>
             
-            <div className="relative z-10 space-y-6">
-              <span className="text-aurora-teal font-bold tracking-[0.3em] uppercase text-[10px] block">The Action</span>
-              <h3 className="text-2xl font-serif text-slate-900 font-normal">Our Mission</h3>
-              <div className="w-12 h-[2px] bg-aurora-teal/40 group-hover:w-full transition-all duration-700"></div>
-              {/* Calibri Body Content */}
-              <p className="text-slate-600 text-lg font-light leading-relaxed italic">
-                We partner with organisations to reduce risk, improve people management, and support growth through expert, commercially focused HR advice.
-              </p>
+            {/* Main Gradient Card (Inverted Direction) */}
+            <div className="relative p-10 md:p-12 rounded-[2.5rem] bg-gradient-to-br from-slate-900 via-[#1E293B] to-aurora-teal shadow-2xl overflow-hidden min-h-[320px] flex flex-col justify-between">
+              
+              {/* Decorative Glow */}
+              <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-aurora-teal/10 rounded-full blur-3xl group-hover:bg-aurora-teal/20 transition-colors"></div>
+
+              <div className="space-y-4">
+                <span className="text-white/60 font-normal tracking-[0.3em] uppercase text-[10px] block">
+                  The Action
+                </span>
+                <h3 className="text-3xl font-serif text-white font-normal">Our Mission</h3>
+                <div className="w-12 h-[1px] bg-white/30"></div>
+                
+                <p className="text-white text-lg md:text-xl font-normal leading-snug">
+                  We partner with organisations to reduce risk, improve people management, and support growth through expert, commercially focused HR advice.
+                </p>
+              </div>
+
+              {/* Hashtags as per reference style */}
+              <div className="pt-8 flex gap-4 text-[12px] text-white/40 tracking-wider">
+                <span>#StrategicHR</span>
+                <span>#BusinessGrowth</span>
+              </div>
             </div>
           </div>
 
