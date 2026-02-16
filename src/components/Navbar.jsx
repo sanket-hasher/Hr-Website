@@ -24,14 +24,15 @@ const Navbar = () => {
     };
   }, []);
 
+  // UPDATED: Added Core Values before Team
   const whoWeAreLinks = [
     { name: 'Why Us', href: '#why-us' },
     { name: 'Vision & Mission', href: '#vision-mission' },
     { name: 'Services', href: '#industries' },
+    { name: 'Core Values', href: '#core-values' }, 
     { name: 'Team', href: '#team' },
   ];
 
-  // Professional body font (Plus Jakarta Sans)
   const navFontStyle = { fontFamily: 'var(--font-body)', fontWeight: '500' };
 
   const getNavLinkClass = () => {
@@ -42,11 +43,6 @@ const Navbar = () => {
 
   return (
     <nav className="fixed w-full z-[100] px-4 md:px-6 py-4 transition-all duration-500">
-      {/* TRANSPARENCY UPDATES:
-          - Scrolled: bg-white/40 -> bg-white/25 (More transparent)
-          - Initial: bg-white/10 -> bg-white/5 (Ultra transparent)
-          - Reduced border opacity for better blending
-      */}
       <div className={`max-w-7xl mx-auto px-4 md:px-8 py-1.5 flex items-center justify-between rounded-2xl transition-all duration-700 border ${
         isScrolled 
           ? 'bg-white/25 backdrop-blur-3xl border-white/40 shadow-2xl scale-[0.99]' 
@@ -58,8 +54,7 @@ const Navbar = () => {
           <img 
             src={logo} 
             alt="HR Souk" 
-            className="h-14 md:h-20 w-auto object-contain filter brightness-125 contrast-110 cursor-pointer" 
-            onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
+            className="h-14 md:h-20 w-auto object-contain filter brightness-125 contrast-110" 
           />
         </div>
 

@@ -4,7 +4,7 @@ import logo from '../assets/hr_souk_logo_2.png';
 const Footer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Applying Calibri with strictly normal weight
+  // Applying Calibri with strictly normal weight for elite professional clarity
   const calibriStyle = { 
     fontFamily: 'Calibri, "Candara", "Segoe UI", sans-serif',
     fontWeight: '400' 
@@ -18,14 +18,12 @@ const Footer = () => {
           {/* BRAND SECTION */}
           <div className="space-y-6 max-w-sm">
             <div className="flex items-center">
-              {/* CLEAN LOGO ENHANCEMENT: Maintained visibility settings */}
               <img 
                 src={logo} 
                 alt="HR Souk" 
                 className="h-20 md:h-24 w-auto object-contain brightness-125 contrast-110 drop-shadow-sm"
               />
             </div>
-            {/* Non-bold description */}
             <p className="text-slate-400 leading-relaxed text-[15px] font-normal">
               Empowering organizations with smart, ethical, and technology-driven HR solutions across the GCC and beyond.
             </p>
@@ -49,7 +47,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* COPYRIGHT & LEGAL - Reduced margin for height optimization */}
+        {/* COPYRIGHT & LEGAL */}
         <div className="mt-12 pt-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-[11px] text-white/20 tracking-widest uppercase font-normal">
             © 2026 HR Souk. All rights reserved.
@@ -65,20 +63,25 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* PRIVACY POLICY MODAL - Logic and content preserved */}
+      {/* UPDATED PRIVACY POLICY MODAL */}
       {isModalOpen && (
         <div className="fixed inset-0 z-[2000] flex items-center justify-center p-4">
           <div 
-            className="absolute inset-0 bg-slate-900/80 backdrop-blur-md animate-in fade-in duration-500"
+            /* Increased transparency by changing bg-slate-900/80 to bg-slate-900/60 */
+            className="absolute inset-0 bg-slate-900/60 backdrop-blur-md animate-in fade-in duration-500"
             onClick={() => setIsModalOpen(false)}
           ></div>
           
-          <div className="relative bg-white rounded-[2.5rem] shadow-2xl max-w-2xl w-full max-h-[85vh] overflow-hidden flex flex-col border border-white/50 animate-in zoom-in-95 duration-500" style={calibriStyle}>
+          <div 
+            /* Maintained professional rounded corners and shadow */
+            className="relative bg-white/95 rounded-[2.5rem] shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden flex flex-col border border-white/50 animate-in zoom-in-95 duration-500" 
+            style={calibriStyle}
+          >
             <div className="h-2 w-full bg-aurora-teal"></div>
             
-            <div className="px-12 py-6 border-b border-slate-100 flex justify-between items-center">
-              <h3 className="text-3xl font-serif text-slate-900 font-light">
-                Privacy <span className="text-aurora-teal italic">Policy</span>
+            <div className="px-12 pt-8 pb-2 flex justify-between items-center">
+              <h3 className="text-2xl font-serif text-slate-900 font-light">
+                Privacy <span className="text-aurora-teal">Policy</span>
               </h3>
               <button 
                 onClick={() => setIsModalOpen(false)} 
@@ -88,39 +91,38 @@ const Footer = () => {
               </button>
             </div>
 
-            <div className="px-12 py-8 overflow-y-auto text-slate-700 leading-relaxed text-[16px] space-y-6 font-normal">
-              <p>Last Updated: January 15, 2026</p>
-              <ul className="space-y-4">
-                <li className="flex gap-4">
-                  <span className="text-aurora-teal">✦</span>
-                  <p>HR Souk respects your privacy and handles all information responsibly and confidentially.</p>
-                </li>
-                <li className="flex gap-4">
-                  <span className="text-aurora-teal">✦</span>
-                  <p>We collect only necessary business, professional, and contact data to deliver HR consulting and talent services.</p>
-                </li>
-                <li className="flex gap-4">
-                  <span className="text-aurora-teal">✦</span>
-                  <p>Information is accessed solely by authorized professionals and protected through reasonable security measures.</p>
-                </li>
-                <li className="flex gap-4">
-                  <span className="text-aurora-teal">✦</span>
-                  <p>We do not sell or misuse personal data.</p>
-                </li>
-                <li className="flex gap-4">
-                  <span className="text-aurora-teal">✦</span>
-                  <p>Data may be shared only with trusted partners, with consent, or where required by law.</p>
-                </li>
-                <li className="flex gap-4">
-                  <span className="text-aurora-teal">✦</span>
-                  <p>Information is retained only as long as necessary for service or compliance purposes.</p>
-                </li>
-              </ul>
-              <div className="pt-6 border-t border-slate-100">
-                <p className="text-slate-700">
-                  For privacy queries, contact <a href="mailto:advisory@hrsouk.in" className="text-aurora-teal hover:underline transition-all">advisory@hrsouk.in</a>
+            {/* CONTENT AREA: Removed scrollbar with 'scrollbar-none' */}
+            <div className="px-12 pt-2 pb-8 overflow-y-auto scrollbar-none text-slate-700 leading-relaxed text-[14px] md:text-[15px] space-y-4 font-normal">
+              <p>
+                At HRSouk, we are committed to protecting the privacy and confidentiality of our clients, candidates, and website visitors. This Privacy Policy outlines how we collect, use, store, and safeguard your personal information when you visit our website or engage with our recruitment services.
+              </p>
+
+              <div className="space-y-3">
+                <p>
+                  We may collect personal information such as your name, contact details, and other relevant information submitted through our website forms or communication channels. This information is used strictly for business communication, and service purposes.
                 </p>
-                <p className="mt-4 text-sm opacity-60 italic">© 2026 HR Souk Legal Affairs.</p>
+
+                <p>
+                  HRSouk ensures that all personal data is handled securely and in compliance with applicable data protection laws. We do not sell, rent, or share your personal information with third parties.
+                </p>
+
+                <p>
+                  Our website may use cookies to enhance user experience, analyse website traffic, and improve our services. Users can manage cookie preferences through their browser settings.
+                </p>
+              </div>
+
+              <p>
+                By using the HRSouk website, you consent to the terms outlined in this Privacy Policy. We reserve the right to update this policy periodically, and any changes will be reflected on this page.
+              </p>
+
+              <div className="pt-2 border-t border-slate-100">
+                <p>
+                  For any privacy-related concerns, users may contact us through: 
+                  <a href="mailto:advisory@hrsouk.in" className="ml-2 text-aurora-teal hover:underline font-medium transition-all">
+                    advisory@hrsouk.in
+                  </a>
+                </p>
+                <p className="mt-4 text-xs opacity-50 italic">© 2026 HR Souk Legal Affairs.</p>
               </div>
             </div>
           </div>

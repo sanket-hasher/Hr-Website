@@ -8,7 +8,8 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative h-[85vh] w-full overflow-hidden bg-slate-900">
+    /* Reduced height to h-[65vh] for a more compact look */
+    <section className="relative h-[65vh] w-full overflow-hidden bg-slate-900">
       {/* FIXED BACKGROUND LAYER: Prevents image stretching */}
       <div className="absolute inset-0">
         <img 
@@ -19,13 +20,12 @@ const Hero = () => {
         {/* Deep gradient overlay for text contrast */}
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-900/40 to-slate-900/20"></div>
       </div>
-
-      {/* CONTENT LAYER: Fixed syntax and positioned lower */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 text-center h-full flex flex-col justify-start pt-32 md:pt-44">
+      <br></br> <br></br> <br></br>
+      {/* CONTENT LAYER: Maintained positioning while adjusting for new section height */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 text-center h-full flex flex-col justify-start pt-28 md:pt-36">
         <h1 className="text-5xl md:text-7xl font-serif text-white mb-8 tracking-tighter leading-[1.1]">
-          <div className="mb-2 font-light">Enabling</div>
-          <span className="text-aurora-teal italic font-light drop-shadow-2xl">
-            Talent Excellence
+          <span className="text-aurora-teal font-light drop-shadow-2xl">
+            People Excellence Forum
           </span>
         </h1>
 
@@ -33,8 +33,7 @@ const Hero = () => {
           className="max-w-2xl mx-auto text-slate-200 text-lg md:text-xl leading-relaxed opacity-90"
           style={bodyStyle}
         >
-          A dedicated HR solutions partner focused on simplifying and strengthening 
-          how global organizations manage their most valuable asset.
+          Partnering with global organizations to simplify people practices and build stronger, more human workplaces.
         </p>
       </div>
     </section>

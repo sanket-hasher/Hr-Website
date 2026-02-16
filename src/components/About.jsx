@@ -1,61 +1,72 @@
 import React from 'react';
 
 const About = () => {
-  const pillars = ["Trust", "Innovation", "Efficiency", "People"];
-
-  // Professional body font
+  // Professional body font style (Plus Jakarta Sans)
   const bodyStyle = { 
-    fontFamily: 'var(--font-body)', // Plus Jakarta Sans
+    fontFamily: 'var(--font-body), sans-serif', 
     fontWeight: '400',
     color: '#1e293b'
   };
 
+  // Specific style for "The Foundation" in Calibri
+  const calibriBodyStyle = {
+    fontFamily: 'Calibri, "Candara", "Segoe UI", sans-serif',
+    fontWeight: '400'
+  };
+
   return (
-    <section className="py-20 bg-transparent">
+    <section className="py-20 bg-transparent overflow-hidden">
       <div className="max-w-7xl mx-auto px-8">
-        <div className="flex flex-col lg:flex-row gap-20 items-start">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
           
-          <div className="lg:w-3/5 space-y-10">
+          {/* LEFT SIDE: CONTENT */}
+          <div className="lg:w-[60%] space-y-8">
             <div className="space-y-4">
-              {/* Restored Original Tag Style */}
-              <span className="text-aurora-teal tracking-[0.5em] uppercase text-[10px] block font-medium" 
-                    style={{ fontFamily: 'var(--font-heading)' }}>
+              {/* "The Foundation" with reduced letter spacing */}
+              <span 
+                className="text-aurora-teal tracking-[0.1em] uppercase text-[18px] block" 
+                style={calibriBodyStyle}
+              >
                 The Foundation
               </span>
-              {/* RESTORED SERIF HEADING */}
+              
+              {/* Main Heading */}
               <h2 className="text-4xl md:text-5xl font-serif text-slate-900 font-light leading-tight">
-                Built on four <span className="italic text-aurora-teal">powerful pillars</span>
+                Built on four <span className="text-aurora-teal">powerful pillars</span>
               </h2>
             </div>
             
-            <div className="max-w-xl space-y-6 text-slate-700 leading-relaxed text-[16px]" style={bodyStyle}>
+            {/* Body text in Plus Jakarta Sans */}
+            <div className="space-y-6 text-slate-700 leading-relaxed text-[16px] md:text-[17px]" style={bodyStyle}>
               <p className="text-xl text-slate-900 leading-snug font-medium">
                 HRSouk is a dedicated HR solutions platform delivering streamlined, practical, and people-centric services for modern businesses.
               </p>
+              
               <p className="opacity-90">
                 Guided by the belief that the right talent transforms organizations, we provide efficient Recruitment Support, HR Consulting, Onboarding Assistance, and Workforce Management.
               </p>
             </div>
           </div>
 
-          <div className="lg:w-2/5 w-full pt-12">
-            <div className="flex flex-col divide-y divide-slate-300/40 border-t border-slate-300/40">
-              {pillars.map((pillar, index) => (
-                <div key={index} className="group py-8 flex items-center transition-all duration-700 hover:pl-8">
-                  <div className="flex items-center gap-10">
-                    <span className="text-aurora-teal/60 text-[12px] tracking-widest font-semibold" style={bodyStyle}>
-                      0{index + 1}
-                    </span>
-                    {/* RESTORED PILLAR TITLES TO SERIF/SYNE MIX */}
-                    <h4 className="text-slate-900 uppercase tracking-[0.3em] text-[13px] group-hover:text-aurora-teal transition-all duration-500 font-bold"
-                        style={{ fontFamily: 'var(--font-heading)' }}>
-                      {pillar}
-                    </h4>
-                  </div>
-                </div>
-              ))}
+          {/* RIGHT SIDE: IMAGE - Size reduced to match content height */}
+          <div className="lg:w-[35%] w-full mt-10 lg:mt-0">
+            <div className="relative group">
+              {/* Decorative background depth layer */}
+              <div className="absolute inset-0 bg-aurora-teal/10 rounded-[2rem] translate-x-3 translate-y-3 transition-transform group-hover:translate-x-1 group-hover:translate-y-1 duration-700"></div>
+              
+              {/* Main Image Container - Reduced aspect ratio and rounding to scale with text */}
+              <div className="relative overflow-hidden rounded-[2rem] aspect-[5/4] shadow-xl border border-white/20">
+                <img 
+                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800" 
+                  alt="Modern architectural pillars" 
+                  className="w-full h-full object-cover grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-105"
+                />
+                {/* Subtle overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent"></div>
+              </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>

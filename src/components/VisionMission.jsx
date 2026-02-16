@@ -15,7 +15,7 @@ const VisionMission = () => {
         <div className="text-center mb-16">
          
           <h2 className="text-4xl md:text-5xl font-serif text-slate-900 font-light leading-tight">
-            Our Purpose & <span className="italic text-aurora-teal">Direction</span>
+            Our Purpose & <span className="text-aurora-teal">Direction</span>
           </h2>
         </div>
 
