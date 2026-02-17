@@ -32,13 +32,13 @@ const About = () => {
               
               {/* Main Heading */}
               <h2 className="text-4xl md:text-5xl font-serif text-slate-900 font-light leading-tight">
-                Built on four <span className="text-aurora-teal">powerful pillars</span>
+                Built on our <span className="text-aurora-teal">Core Values</span>
               </h2>
             </div>
             
             {/* Body text in Plus Jakarta Sans */}
             <div className="space-y-6 text-slate-700 leading-relaxed text-[16px] md:text-[17px]" style={bodyStyle}>
-              <p className="text-xl text-slate-900 leading-snug font-medium">
+              <p className="opacity-90">
                 HRSouk is a dedicated HR solutions platform delivering streamlined, practical, and people-centric services for modern businesses.
               </p>
               
