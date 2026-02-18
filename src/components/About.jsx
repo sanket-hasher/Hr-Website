@@ -22,28 +22,25 @@ const About = () => {
           {/* LEFT SIDE: CONTENT */}
           <div className="lg:w-[60%] space-y-8">
             <div className="space-y-4">
-              {/* "The Foundation" with reduced letter spacing */}
+              {/* "The Foundation" with reduced letter spacing
               <span 
                 className="text-aurora-teal tracking-[0.1em] uppercase text-[18px] block" 
                 style={calibriBodyStyle}
               >
                 The Foundation
-              </span>
+              </span> */}
               
               {/* Main Heading */}
               <h2 className="text-4xl md:text-5xl font-serif text-slate-900 font-light leading-tight">
-                Built on our <span className="text-aurora-teal">Core Values</span>
+                The <span className="text-aurora-teal">Foundation</span>
               </h2>
             </div>
-            
+          
+
             {/* Body text in Plus Jakarta Sans */}
             <div className="space-y-6 text-slate-700 leading-relaxed text-[16px] md:text-[17px]" style={bodyStyle}>
               <p className="opacity-90">
-                HRSouk is a dedicated HR solutions platform delivering streamlined, practical, and people-centric services for modern businesses.
-              </p>
-              
-              <p className="opacity-90">
-                Guided by the belief that the right talent transforms organizations, we provide efficient Recruitment Support, HR Consulting, Onboarding Assistance, and Workforce Management.
+                Built on our Core Values Of The PIERCE Principles. PIERCE represents strength, clarity, and impact. HRSouk is a dedicated HR solutions platform delivering streamlined, practical, and people-centric services for modern businesses. Guided by the belief that the right talent transforms organizations, we provide efficient Recruitment Support, HR Consulting, Onboarding Assistance, and Workforce Management.
               </p>
             </div>
           </div>

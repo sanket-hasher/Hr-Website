@@ -4,6 +4,11 @@ import { ShieldCheck, Target, Heart, Award, Lightbulb, Users } from 'lucide-reac
 const CoreValues = () => {
   const values = [
     { 
+      title: "Partnership", 
+      icon: <Users size={32} />, 
+      image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=400" 
+    },
+    { 
       title: "Integrity", 
       icon: <ShieldCheck size={32} />, 
       image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=400" 
@@ -14,27 +19,24 @@ const CoreValues = () => {
       image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=400" 
     },
     { 
-      title: "Commitment", 
-      icon: <Target size={32} />, 
-      /* NEW IMAGE: Added specific professional commitment/handshake image */
-      image: "https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&q=80&w=400" 
-    },
-    { 
       title: "Respect", 
       icon: <Heart size={32} />, 
       image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=400" 
     },
     { 
-      title: "Innovation", 
+      title: "Commitment", 
+      icon: <Target size={32} />, 
+      /* NEW IMAGE: Added specific professional commitment/handshake image */
+      image: "https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&q=80&w=400" 
+    },
+    
+    { 
+      title: "Evoluation", 
       icon: <Lightbulb size={32} />, 
       /* UPDATED IMAGE: Professional high-tech collaboration image for Innovation */
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=400" 
-    },
-    { 
-      title: "Partnership", 
-      icon: <Users size={32} />, 
-      image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=400" 
     }
+    
   ];
 
   const calibriStyle = { 
